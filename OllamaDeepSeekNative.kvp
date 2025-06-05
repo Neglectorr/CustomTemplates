@@ -1,0 +1,14 @@
+# Dedicated.OllamaDeepSeekNative.kvp
+# Hoofdmodule-descriptor met AMP-specifieke metadata syntax.
+
+Module=Generic
+Dedicated=True
+
+meta.DisplayName=Ollama DeepSeek Console
+meta.Description=Start de DeepSeek LLM via Ollama met een native PowerShell-commando op de host, en behoudt een actieve console.
+meta.Icon=genericserver
+App.Executable=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+App.Arguments=-NoProfile -Command "& { Write-Host 'Starting Ollama DeepSeek model...'; ollama run hf.co/unsloth/DeepSeek-R1-0528-Qwen3-8B-GGUF:Q4_K_XL; }"
+App.ForceStopBehaviour=Terminate
+App.Autostart=True
+App.HasReadableConsole=True
