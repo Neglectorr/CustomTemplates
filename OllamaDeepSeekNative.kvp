@@ -1,84 +1,56 @@
-meta.DisplayName=Ollama DeepSeek Console
-meta.Description=Start de DeepSeek LLM via Ollama met een native PowerShell-commando op de host, en behoudt een actieve console.
-meta.Icon=genericserver
+# ollamadeepseeknative.kvp
+# Dit is het enige KVP-bestand, dat alle configuratie bevat, nu exact gematcht met node.kvp.
+
+Meta.DisplayName=Ollama DeepSeek Console (Native PowerShell)
+Meta.Description=Start de DeepSeek LLM via Ollama met een native PowerShell-commando op de host, en behoudt een actieve console.
 Meta.OS=Windows
-Meta.Author=Wesley
-Meta.URL=
-Meta.DisplayImageSource=url:https://avatars.githubusercontent.com/u/188598334?v=4
-Meta.EndpointURIFormat= 
-Meta.ConfigManifest=
-Meta.MetaConfigManifest=
-Meta.ConfigRoot=OllamaDeepSeekNative.kvp
+Meta.ArchSupport=Native
+Meta.Arch=All
+Meta.Author=Neglectorr
+Meta.URL=https://github.com/Neglectorr/CustomTemplates
+Meta.Category=AI/LLM
+Meta.Icon=genericserver
+Meta.FriendlyName=Ollama DeepSeek Runner
 Meta.MinAMPVersion=2.6.0.0
-Meta.SpecificDockerImage=
+Meta.ConfigVersion=1.0
+Meta.NoCommercialUsage=False
 Meta.DockerRequired=False
 Meta.DockerBaseReadOnly=False
-Meta.ContainerPolicy=
-Meta.ContainerPolicyReason=
-Meta.ExtraSetupStepsURI=
+Meta.ContainerPolicy=Supported
+Meta.ContainerPolicyReason=Native Windows PowerShell execution
 Meta.Prerequisites=[]
 Meta.ExtraContainerPackages=[]
-Meta.ConfigReleaseState=NotSpecified
-Meta.NoCommercialUsage=False
-Meta.ConfigVersion=
-Meta.ReleaseNotes=
-Meta.BreakingReleaseNotes=
-Meta.AppConfigId=
-Meta.ImportableExtensions=[]
-App.ExecutableWin=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-App.CommandLineArgs=-NoProfile -Command "& { Write-Host 'Starting Ollama DeepSeek model...'; ollama run hf.co/unsloth/DeepSeek-R1-0528-Qwen3-8B-GGUF:Q4_K_XL; }"
-App.ForceStopBehaviour=Terminate
-App.Autostart=True
-App.HasReadableConsole=True
+Meta.ConfigReleaseState=Release
+
+# App settings
 App.DisplayName=Ollama DeepSeek Console
-App.RootDir=./
-App.BaseDirectory=./
-App.SteamWorkshopDownloadLocation=
-App.ExecutableLinux=
-App.WorkingDir=app/{{ApplicationLocation}}
-App.LinuxCommandLineArgs=
-App.WindowsCommandLineArgs=
+App.ExecutableWin=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+App.WorkingDir=C:\Users\<JouwWindowsGebruikersnaam>  ; ZORG DAT DEZE CORRECT IS!
+App.WindowsCommandLineArgs=-NoProfile -Command "& { Write-Host 'Starting Ollama DeepSeek model...'; ollama run hf.co/unsloth/DeepSeek-R1-0528-Qwen3-8B-GGUF:Q4_K_XL; }"
 App.UseLinuxIOREDIR=False
-App.AppSettings={}
-App.EnvironmentVariables={"PATH":"{{$FullRootDir}}node:{{$FullRootDir}}node/bin:%PATH%"}
-App.CommandLineParameterFormat=-{0}={1}
-App.CommandLineParameterDelimiter= 
 App.ExitMethod=OS_CLOSE
 App.ExitTimeout=30
 App.ExitString=exit
-App.ExitFile=app_exit.lck
 App.HasWriteableConsole=True
 App.HasReadableConsole=True
-App.UDPLogger=False
 App.SupportsLiveSettingsChanges=False
-App.LiveSettingChangeCommandFormat=set {0} "{1}"
 App.ForceIPBinding=False
-App.SupportsIPv6=True
 App.ApplicationIPBinding=0.0.0.0
-App.Ports=
-App.AdminPortRef=
-App.PrimaryApplicationPortRef=
-App.UniversalSleepApplicationUDPPortRef=
-App.UniversalSleepSteamQueryPortRef=0
+App.Ports=11434/TCP, 11434/UDP
+App.PrimaryApplicationPortRef=0
 App.MaxUsers=0
 App.UseRandomAdminPassword=False
 App.PersistRandomPassword=False
-App.RemoteAdminPassword=
 App.AdminMethod=STDIO
 App.IgnoreSTDOUTAfterRCON=False
-App.AdminLoginTransform=None
-App.LoginTransformPrefix=
 App.RCONConnectDelaySeconds=5
 App.RCONConnectRetrySeconds=5
 App.RCONHeartbeatMinutes=0
 App.RCONHeartbeatCommand=ping
 App.TelnetLoginFormat={0}
-App.UpdateSources=@IncludeJson[nodeupdates.json]
 App.PreStartStages=[]
 App.UserActions=[]
 App.ForceUpdate=False
-App.ForceUpdateReason=
-App.Compatibility=None
 App.SteamUpdateAnonymousLogin=True
 App.SteamForceLoginPrompt=False
 App.RapidStartup=False
@@ -90,7 +62,8 @@ App.MonitorDirectChildOnly=False
 App.SupportsUniversalSleep=False
 App.WakeupMode=Any
 App.ApplicationReadyMode=Immediate
-App.TemplateMatchRegex={{(!?(?<Platform>Linux|Windows|All):)?(?<Value>\$?[\w]+)}}
+
+# Console settings
 Console.FilterMatchRegex=\e\[(\d+;)*(\d+)?[ABCDHJKfmsu]|\e\[?[?\>\=\da-z]+
 Console.FilterMatchReplacement=
 Console.ThrowawayMessageRegex=
@@ -103,6 +76,8 @@ Console.MetricsRegex=
 Console.SuppressLogAtStart=False
 Console.ActivateLogRegex=
 Console.UserActions={}
+
+# Limits settings
 Limits.SleepMode=False
 Limits.SleepOnStart=False
 Limits.SleepDelayMinutes=5
