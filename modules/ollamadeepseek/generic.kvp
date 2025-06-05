@@ -1,0 +1,7 @@
+# Generic.kvp
+# Dit bestand definieert de executable en argumenten voor de "Generic Module".
+
+Executable=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Arguments=-NoProfile -Command "& { Write-Host 'Starting Ollama DeepSeek model...'; ollama run hf.co/unsloth/DeepSeek-R1-0528-Qwen3-8B-GGUF:Q4_K_XL }"
+WorkingDirectory=C:\Users\<JouwWindowsGebruikersnaam>  # AANPASSEN: Werkmap waar Ollama is geïnstalleerd, of waar je wilt werken.
+ForceStopBehaviour=Terminate
