@@ -1,0 +1,10 @@
+# App.kvp
+# Dit bestand definieert de uitvoeringsdetails voor de applicatie.
+
+App.Executable=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+App.Arguments=-NoProfile -Command "& { Write-Host 'Starting Ollama DeepSeek model...'; ollama run hf.co/unsloth/DeepSeek-R1-0528-Qwen3-8B-GGUF:Q4_K_XL; }"
+App.ForceStopBehaviour=Terminate
+App.Autostart=True
+
+Server.Port=11434
+Server.Ip=0.0.0.0
