@@ -25,7 +25,7 @@ Meta.ConfigReleaseState=Release
 # App settings
 App.DisplayName=Ollama DeepSeek Console
 App.ExecutableWin=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-App.WorkingDir=C:\Users\<JouwWindowsGebruikersnaam>  ; ZORG DAT DEZE CORRECT IS!
+App.WorkingDir=C:\Users\wesley
 App.WindowsCommandLineArgs=-NoProfile -Command "& { Write-Host 'Starting Ollama DeepSeek model...'; ollama run hf.co/unsloth/DeepSeek-R1-0528-Qwen3-8B-GGUF:Q4_K_XL; }"
 App.UseLinuxIOREDIR=False
 App.ExitMethod=OS_CLOSE
