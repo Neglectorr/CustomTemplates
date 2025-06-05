@@ -1,8 +1,10 @@
-# Dedicated.kvp
-# Dit bestand definieert de basisinformatie van de template voor AMP.
+# Dedicated.OllamaDeepSeekNative.kvp
+# Hoofdmodule-descriptor met AMP-specifieke metadata syntax.
 
-Name=Ollama DeepSeek Console (Native PowerShell)
-Description=Start de DeepSeek LLM via Ollama met een native PowerShell-commando op de host, en behoudt een actieve console.
-Category=AI/LLM
 Module=ollama-deepseek-generic
 Dedicated=True
+
+meta.Name=Ollama DeepSeek Console (Native PowerShell)
+meta.Description=Start de DeepSeek LLM via Ollama met een native PowerShell-commando op de host, en behoudt een actieve console.
+meta.Category=AI/LLM
+meta.Icon=genericserver
