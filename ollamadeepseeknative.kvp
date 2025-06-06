@@ -24,6 +24,8 @@ Meta.AppConfigId=2cd58de5-88a4-45f7-aara-b09d08d1fd5e
 Meta.DisplayImageSource=
 Meta.ConfigRoot=ollamadeepseeknative.kvp
 Meta.MetaConfigManifest=ollamadeepseeknativemetaconfig.json
+App.RootDir=./ollama/
+App.BaseDirectory=./ollama/install/
 
 # App settings
 App.DisplayName=Ollama DeepSeek Console
