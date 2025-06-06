@@ -4,8 +4,6 @@
 Meta.DisplayName=Ollama DeepSeek Console (Native PowerShell)
 Meta.Description=Start de DeepSeek LLM via Ollama met een native PowerShell-commando op de host, en behoudt een actieve console.
 Meta.OS=Windows
-Meta.ArchSupport=Native
-Meta.Arch=All
 Meta.Author=Neglectorr
 Meta.URL=https://github.com/Neglectorr/CustomTemplates
 Meta.Category=AI/LLM
@@ -13,6 +11,7 @@ Meta.Icon=genericserver
 Meta.FriendlyName=Ollama DeepSeek Runner
 Meta.MinAMPVersion=2.6.0.0
 Meta.ConfigVersion=1.0
+Meta.ConfigManifest=ollamadeepseeknativemetaconfig.json
 Meta.NoCommercialUsage=False
 Meta.DockerRequired=False
 Meta.DockerBaseReadOnly=False
@@ -21,7 +20,7 @@ Meta.ContainerPolicyReason=Native Windows PowerShell execution
 Meta.Prerequisites=[]
 Meta.ExtraContainerPackages=[]
 Meta.ConfigReleaseState=Release
-Meta.AppConfigId=ollamadeepseeknativeconfig.json
+Meta.AppConfigId=2cd58de5-88a4-45f7-aara-b09d08d1fd5e
 Meta.DisplayImageSource=
 
 # App settings
