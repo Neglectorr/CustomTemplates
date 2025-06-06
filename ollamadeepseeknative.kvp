@@ -1,7 +1,7 @@
 # ollamadeepseeknative.kvp
 # Dit is het enige KVP-bestand, dat alle configuratie bevat, nu exact gematcht met node.kvp.
 
-Meta.DisplayName=Ollama DeepSeek Console (Native PowerShell)
+Meta.DisplayName=Ollama DeepSeek Console
 Meta.Description=Start de DeepSeek LLM via Ollama met een native PowerShell-commando op de host, en behoudt een actieve console.
 Meta.OS=Windows
 Meta.Author=Neglectorr
@@ -29,7 +29,7 @@ App.BaseDirectory=./ollama/install/
 
 # App settings
 App.DisplayName=Ollama DeepSeek Console
-App.ExecutableWin=C:\Users\wesley\AppData\Local\Programs\Ollama\ollama.exe
+App.ExecutableWin=./ollama/install/ollama.exe
 App.WorkingDir=
 App.WindowsCommandLineArgs="run hf.co/unsloth/DeepSeek-R1-0528-Qwen3-8B-GGUF:Q4_K_XL"
 App.UseLinuxIOREDIR=False
