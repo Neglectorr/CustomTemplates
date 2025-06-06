@@ -29,9 +29,9 @@ App.BaseDirectory=./ollama/install/
 
 # App settings
 App.DisplayName=Ollama DeepSeek Console
-App.ExecutableWin=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+App.ExecutableWin=C:\Users\wesley\AppData\Local\Programs\Ollama\ollama.exe
 App.WorkingDir=
-App.WindowsCommandLineArgs=-NoProfile -Command "& { Write-Host 'Starting Ollama DeepSeek model...'; ollama run hf.co/unsloth/DeepSeek-R1-0528-Qwen3-8B-GGUF:Q4_K_XL; }"
+App.WindowsCommandLineArgs="run hf.co/unsloth/DeepSeek-R1-0528-Qwen3-8B-GGUF:Q4_K_XL"
 App.UseLinuxIOREDIR=False
 App.ExitMethod=OS_CLOSE
 App.ExitTimeout=30
