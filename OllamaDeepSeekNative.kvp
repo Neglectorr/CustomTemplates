@@ -21,6 +21,8 @@ Meta.ContainerPolicyReason=Native Windows PowerShell execution
 Meta.Prerequisites=[]
 Meta.ExtraContainerPackages=[]
 Meta.ConfigReleaseState=Release
+Meta.AppConfigId=ollamadeepseeknativeconfig.json
+Meta.DisplayImageSource=
 
 # App settings
 App.DisplayName=Ollama DeepSeek Console
